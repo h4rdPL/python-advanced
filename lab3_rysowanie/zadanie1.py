@@ -7,10 +7,12 @@ if image is None:
 else:
     print("Obraz wczytano poprawnie.")
 
-
 blue = (255, 0, 0)
 (centerX, centerY) = (image.shape[1] // 2, image.shape[0] // 2)
 
-cv2.line(image, (centerX), (0,0), blue)
+
+cv2.line(image, (centerX, centerY), (0, 0), blue, 2)
+
 cv2.imshow("Canvas", image)
 cv2.waitKey(0)
+cv2.destroyAllWindows()
